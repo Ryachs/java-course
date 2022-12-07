@@ -12,7 +12,7 @@ Si necesita establecer valores no predeterminados para cualquiera de estos pará
 Es una especializacion de la clase @Component, que nos permite detectar de forma automatica las clases de implementacion a través del escaneo de classpath.
 
 ###### Ej:
-
+```
 @Controller
 @RequestMapping("movie")
 public class MovieController {
@@ -26,14 +26,14 @@ public class MovieController {
         // ...
     }
 }
-
+```
 Anotamos el método de manejo de solicitudes con @ResponseBody . Esta anotación permite la serialización automática del objeto devuelto en HttpResponse .
 
 ###### @RestController()
  Esta es la otra version. incluye las anotaciones @Controller y @ResponseBody. Fasilitando la implementacion en el controller.
  
  ###### Ej:
-
+ ```
 @RestController
 @RequestMapping("")
 public class MovieRestController {
@@ -47,12 +47,13 @@ public class MovieRestController {
         // ...
     }
 }
-
+```
 ###### @RequestMapping()
 la anotación se usa para asignar solicitudes web a los métodos de Spring Controller.
 
  ###### Ej:
- @RestController
+```
+@RestController
 @RequestMapping("/api/movie")
 public class MovieRestController {
     
@@ -65,11 +66,12 @@ public class MovieRestController {
         // ...
     }
 }
-
+```
 para pegarle al metodo getMovie necesitariamos generar la siguiente ruta en postman
+```
 http://localhost:8080/api/movie/{id}
 http://localhost:8080/api/movie/85
-
+```
 ###### @GetMapping()
 Esta anotacion nos permite asignar el tipo de solicitud http a los metodos del controller, existen varias variantes como
 @PostMapping, @Putmapping, DeleteMapping
