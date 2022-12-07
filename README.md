@@ -1,5 +1,5 @@
 # java-course
-Ejercicios Simples para familiarizarse con SPRING TOOLS
+Ejercicios Simples para familiarizarse con SPRING Boot
 
 ## Etiquetas (Beans)
 
