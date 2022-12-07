@@ -3,14 +3,15 @@ Ejercicios Simples para familiarizarse con SPRING BOOT
 
 ## Etiquetas (Beans)
 
-@Data:
+###### @Data:
 Es una anotacion de atajo que agrupa las caracteristicas de @ToString, @EqualsAndHashCode, @Getter/@Setter y @RequiredArgsConstructor, Basicamente genera todo el modelo que se asocia normalmente a una clase POJO.
 Si necesita establecer valores no predeterminados para cualquiera de estos parámetros, simplemente agregue esas anotaciones explícitamente es lo suficientemente inteligente como para diferir esas anotaciones. @Setter @ToString @EqualsAndHashCode @RequiredArgsConstructorcallSuperincludeFieldNamesexclude @Data.
 
-@Controller
+###### @Controller
 Es una especializacion de la clase @Component, que nos permite detectar de forma automatica las clases de implementacion a través del escaneo de classpath.
 
-Ej:
+###### Ej:
+
 @Controller
 @RequestMapping("movie")
 public class MovieController {
@@ -27,11 +28,12 @@ public class MovieController {
 
 Anotamos el método de manejo de solicitudes con @ResponseBody . Esta anotación permite la serialización automática del objeto devuelto en HttpResponse .
 
-@RestController()
+###### @RestController()
  Esta es la otra version. incluye las anotaciones @Controller y @ResponseBody. Fasilitando la implementacion en el controller.
  
- Ej:
- @RestController
+ ###### Ej:
+
+@RestController
 @RequestMapping("")
 public class MovieRestController {
     
@@ -45,10 +47,10 @@ public class MovieRestController {
     }
 }
 
-@RequestMapping()
+###### @RequestMapping()
 la anotación se usa para asignar solicitudes web a los métodos de Spring Controller.
 
- Ej:
+ ###### Ej:
  @RestController
 @RequestMapping("/api/movie")
 public class MovieRestController {
@@ -67,17 +69,17 @@ para pegarle al metodo getMovie necesitariamos generar la siguiente ruta en post
 http://localhost:8080/api/movie/{id}
 http://localhost:8080/api/movie/85
 
-@GetMapping()
+###### @GetMapping()
 Esta anotacion nos permite asignar el tipo de solicitud http a los metodos del controller, existen varias variantes como
 @PostMapping, @Putmapping, DeleteMapping
 
-@Service()
+###### @Service()
 anota clases en la capa de servicio.
 Marcamos beans con @Service para indicar que mantienen la lógica de negocio. Además de usarse en la capa de servicio, no hay ningún otro uso especial para esta anotación.
 
-@Component()
+###### @Component()
 es un estereotipo genérico para cualquier componente administrado por Spring.
 
-@Repository
+###### @Repository
 anota las clases en la capa de persistencia, que actuará como repositorio de la base de datos.
 El trabajo de @Repository es capturar excepciones específicas de persistencia y volver a lanzarlas como una de las excepciones no verificadas unificadas de Spring .
