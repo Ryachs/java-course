@@ -5,14 +5,14 @@ Ejercicios Simples para familiarizarse con SPRING BOOT
 ## Etiquetas (Beans)
 
 ###### @Data:
-Es una anotacion de atajo que agrupa las caracteristicas de @ToString, @EqualsAndHashCode, @Getter/@Setter y @RequiredArgsConstructor, Basicamente genera todo el modelo que se asocia normalmente a una clase POJO.
-Si necesita establecer valores no predeterminados para cualquiera de estos parámetros, simplemente agregue esas anotaciones explícitamente es lo suficientemente inteligente como para diferir esas anotaciones. @Setter @ToString @EqualsAndHashCode @RequiredArgsConstructorcallSuperincludeFieldNamesexclude @Data.
+Es una anotacion de atajo que agrupa las caracteristicas de `@ToString`, `@EqualsAndHashCode`, `@Getter/@Setter` y `@RequiredArgsConstructor`, Basicamente genera todo el modelo que se asocia normalmente a una clase POJO.
+Si necesita establecer valores no predeterminados para cualquiera de estos parámetros, simplemente agregue esas anotaciones explícitamente es lo suficientemente inteligente como para diferir esas anotaciones. `@Setter` `@ToString` `@EqualsAndHashCode` `@RequiredArgsConstructorcallSuperincludeFieldNamesexclude` `@Data`.
 
 ###### @Controller
 Es una especializacion de la clase @Component, que nos permite detectar de forma automatica las clases de implementacion a través del escaneo de classpath.
 
 ###### Ej:
-
+```java
 @Controller
 @RequestMapping("movie")
 public class MovieController {
@@ -26,14 +26,14 @@ public class MovieController {
         // ...
     }
 }
-
+```
 Anotamos el método de manejo de solicitudes con @ResponseBody . Esta anotación permite la serialización automática del objeto devuelto en HttpResponse .
 
 ###### @RestController()
- Esta es la otra version. incluye las anotaciones @Controller y @ResponseBody. Fasilitando la implementacion en el controller.
+ Esta es la otra version. incluye las anotaciones `@Controller` y `@ResponseBody`. Fasilitando la implementacion en el controller.
  
  ###### Ej:
-
+```java
 @RestController
 @RequestMapping("")
 public class MovieRestController {
@@ -47,12 +47,13 @@ public class MovieRestController {
         // ...
     }
 }
-
+```
 ###### @RequestMapping()
 la anotación se usa para asignar solicitudes web a los métodos de Spring Controller.
 
  ###### Ej:
- @RestController
+```java 
+@RestController
 @RequestMapping("/api/movie")
 public class MovieRestController {
     
@@ -65,7 +66,7 @@ public class MovieRestController {
         // ...
     }
 }
-
+```
 para pegarle al metodo getMovie necesitariamos generar la siguiente ruta en postman
 http://localhost:8080/api/movie/{id}
 http://localhost:8080/api/movie/85
