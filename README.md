@@ -68,8 +68,10 @@ public class MovieRestController {
 }
 ```
 para pegarle al metodo getMovie necesitariamos generar la siguiente ruta en postman
+```
 http://localhost:8080/api/movie/{id}
 http://localhost:8080/api/movie/85
+```
 
 ###### @GetMapping()
 Esta anotacion nos permite asignar el tipo de solicitud http a los metodos del controller, existen varias variantes como
