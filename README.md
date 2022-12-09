@@ -83,4 +83,19 @@ es un estereotipo genérico para cualquier componente administrado por Spring.
 
 ###### @Repository
 anota las clases en la capa de persistencia, que actuará como repositorio de la base de datos.
-El trabajo de @Repository es capturar excepciones específicas de persistencia y volver a lanzarlas como una de las excepciones no verificadas unificadas de Spring .
+El trabajo de @Repository es capturar excepciones específicas de persistencia y volver a lanzarlas como una de las excepciones no verificadas unificadas de Spring.
+
+###### @Entity
+Indica que la clase es una entidad
+
+###### @Table(name = "Contactos")
+Indica que esta asociada a la tabla en database
+
+###### @NamedQuery()
+
+###### @id
+Indica que es un atributo id
+
+###### @GeneratedValue(strategy=GenerationType.IDENTY)
+estrategia de generacion de claves
+cuando se inserten objetos en base de datos, lo identifica como que se genera automaticamente y no se debe incluir
