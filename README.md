@@ -9,7 +9,7 @@ Es una anotacion de atajo que agrupa las caracteristicas de `@ToString`, `@Equal
 Si necesita establecer valores no predeterminados para cualquiera de estos parámetros, simplemente agregue esas anotaciones explícitamente es lo suficientemente inteligente como para diferir esas anotaciones. `@Setter` `@ToString` `@EqualsAndHashCode` `@RequiredArgsConstructorcallSuperincludeFieldNamesexclude` `@Data`.
 
 ###### @Controller
-Es una especializacion de la clase @Component, que nos permite detectar de forma automatica las clases de implementacion a través del escaneo de classpath.
+Es una especializacion de la clase `@Component`, que nos permite detectar de forma automatica las clases de implementacion a través del escaneo de classpath.
 
 ###### Ej:
 ```java
@@ -27,7 +27,7 @@ public class MovieController {
     }
 }
 ```
-Anotamos el método de manejo de solicitudes con @ResponseBody . Esta anotación permite la serialización automática del objeto devuelto en HttpResponse .
+Anotamos el método de manejo de solicitudes con `@ResponseBody`. Esta anotación permite la serialización automática del objeto devuelto en HttpResponse .
 
 ###### @RestController()
  Esta es la otra version. incluye las anotaciones `@Controller` y `@ResponseBody`. Fasilitando la implementacion en el controller.
@@ -75,7 +75,7 @@ http://localhost:8080/api/movie/85
 
 ###### @GetMapping()
 Esta anotacion nos permite asignar el tipo de solicitud http a los metodos del controller, existen varias variantes como
-@PostMapping, @Putmapping, DeleteMapping
+`@PostMapping`, `@Putmapping`, `@DeleteMapping`.
 
 ###### @Service()
 anota clases en la capa de servicio.
@@ -86,15 +86,13 @@ es un estereotipo genérico para cualquier componente administrado por Spring.
 
 ###### @Repository
 anota las clases en la capa de persistencia, que actuará como repositorio de la base de datos.
-El trabajo de @Repository es capturar excepciones específicas de persistencia y volver a lanzarlas como una de las excepciones no verificadas unificadas de Spring.
+El trabajo de `@Repository` es capturar excepciones específicas de persistencia y volver a lanzarlas como una de las excepciones no verificadas unificadas de Spring.
 
 ###### @Entity
 Indica que la clase es una entidad
 
 ###### @Table(name = "Contactos")
 Indica que esta asociada a la tabla en database
-
-###### @NamedQuery()
 
 ###### @id
 Indica que es un atributo id
