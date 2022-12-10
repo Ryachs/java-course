@@ -100,3 +100,8 @@ Indica que es un atributo id
 ###### @GeneratedValue(strategy=GenerationType.IDENTY)
 estrategia de generacion de claves
 cuando se inserten objetos en base de datos, lo identifica como que se genera automaticamente y no se debe incluir
+
+###### @Async
+anotar un método de un bean con `@Async` hará que se ejecute en un hilo separado. Esto quiere decir que el usuario que llama al servicio no esperará a que se complete el método llamado.
+
+
