@@ -13,4 +13,12 @@ public class Movie {
     @NotEmpty
     private String director;
     private Date year;
+
+    public Movie(long id, String name, String director, Date year) {
+        this.id = id;
+        this.name = name;
+        this.director = director;
+        this.year = year;
+
+    }
 }
