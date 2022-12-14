@@ -104,4 +104,7 @@ cuando se inserten objetos en base de datos, lo identifica como que se genera au
 ###### @Async
 anotar un método de un bean con `@Async` hará que se ejecute en un hilo separado. Esto quiere decir que el usuario que llama al servicio no esperará a que se complete el método llamado.
 
+###### @Mapper
 
+###### ResponseEntity<T>
+ResponseEntity representa la respuesta HTTP completa: código de estado, encabezados y cuerpo . Como resultado, podemos usarlo para configurar completamente la respuesta HTTP.
