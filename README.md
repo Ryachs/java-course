@@ -106,3 +106,31 @@ anotar un método de un bean con `@Async` hará que se ejecute en un hilo separa
 
 ###### ResponseEntity<T>
 ResponseEntity representa la respuesta HTTP completa: código de estado, encabezados y cuerpo . Como resultado, podemos usarlo para configurar completamente la respuesta HTTP.
+    
+    
+
+    
+### CREACION DATABASE
+
+###### Movie
+```
+CREATE TABLE `movies` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name_movie` varchar(100) NOT NULL,
+  `director_movie` varchar(100) NOT NULL,
+  `year_movie` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+    
+###### Contacto
+
+```
+CREATE TABLE `contactos` (
+  `id_Contacto` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) NOT NULL,
+  `edad` int NOT NULL,
+  `email` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_Contacto`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
