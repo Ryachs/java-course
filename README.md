@@ -106,10 +106,67 @@ anotar un método de un bean con `@Async` hará que se ejecute en un hilo separa
 
 ###### ResponseEntity<T>
 ResponseEntity representa la respuesta HTTP completa: código de estado, encabezados y cuerpo . Como resultado, podemos usarlo para configurar completamente la respuesta HTTP.
-    
-    
 
-    
+###### @Email
+Anotacion para definir un campo de un objeto como email, nos permite realizar vilidaciones del campo de texto
+ ```java 
+ Public Class Usuario() {
+    private String name;
+    private String lastName;
+    private int phone;
+    @Email(message = "formato incorrecto")
+    private String email;
+ }
+ ```
+ 
+ ###### @Size()
+ Anotacion nos permite definir un rango de digitos 
+  ```java 
+ Public Class Usuario() {
+    private String name;
+    private String lastName;
+    @Size(min = 3, max = 8)
+    private int phone;
+    @Email(message = "formato incorrecto")
+    private String email;
+ }
+  ```
+ 
+ ###### @Pattern()
+ nos permite realizar validaciones de expresiones regulares
+ [0-9], lo utilizamos para decir que los caracteres permitidos son en ese rango.
+ {2}, lo utilizamos para decir que solo se utilizaron en 2 combinaciones como maximo ej: 18, 29, 15. 
+ [.], lo utilizamos para decir que luego ira un .
+ 
+```java 
+ Public Class Usuario() {
+    @Pattern(regexp = "[ 0-9 ]{2}[.][ 0-9 ]{3}[.][ 0-9 ]{3}[.][-][a-z A-Z]{1}")
+    private int rut;
+    private String name;
+    private String lastName;
+    @Size(min = 3, max = 8)
+    private int phone;
+    @Email(message = "formato incorrecto")
+    private String email;
+ }
+  ```
+ @NotBlank
+ valida que un campo no sea null y que no contenga espacios en blanco
+ 
+ ```java 
+ Public Class Usuario() {
+    @Pattern(regexp = "[ 0-9 ]{2}[.][ 0-9 ]{3}[.][ 0-9 ]{3}[.][-][a-z A-Z]{1}")
+    private int rut;
+    private String name;
+    private String lastName;
+    @NotBlanke
+    @Size(min = 3, max = 8)
+    private int phone;
+    @Email(message = "formato incorrecto")
+    private String email;
+ }
+  ```
+  
 ### CREACION DATABASE
 
 ###### Movie
