@@ -134,9 +134,11 @@ Anotacion para definir un campo de un objeto como email, nos permite realizar vi
  
  ###### @Pattern()
  nos permite realizar validaciones de expresiones regulares
+ ```
  [0-9], lo utilizamos para decir que los caracteres permitidos son en ese rango.
  {2}, lo utilizamos para decir que solo se utilizaron en 2 combinaciones como maximo ej: 18, 29, 15. 
  [.], lo utilizamos para decir que luego ira un .
+ ```
  
 ```java 
  Public Class Usuario() {
@@ -150,7 +152,7 @@ Anotacion para definir un campo de un objeto como email, nos permite realizar vi
     private String email;
  }
   ```
- @NotBlank
+ ###### @NotBlank
  valida que un campo no sea null y que no contenga espacios en blanco
  
  ```java 
@@ -167,7 +169,7 @@ Anotacion para definir un campo de un objeto como email, nos permite realizar vi
  }
   ```
     
- @Min and @Max
+ ###### @Min and @Max
  valida que un campo posea un valor minimo y uno maximo
  
  ```java 
@@ -187,7 +189,7 @@ Anotacion para definir un campo de un objeto como email, nos permite realizar vi
  }
   ```
     
-  @DateTimeFormat
+  ###### @DateTimeFormat
   Se utiliza para definir el formato de los campos de fecha
  
  ```java 
@@ -206,7 +208,7 @@ Anotacion para definir un campo de un objeto como email, nos permite realizar vi
  }
   ```
     
-   @Past
+  ###### @Past
   Se utiliza para definir que el ingreso de la fecha debe ser pasada a la actual
  
  ```java 
@@ -226,7 +228,7 @@ Anotacion para definir un campo de un objeto como email, nos permite realizar vi
  }
   ```
     
-   @Future
+  ###### @Future
   Se utiliza para definir que el ingreso de la fecha debe ser futura
  
  ```java 
