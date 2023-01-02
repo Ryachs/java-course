@@ -166,6 +166,85 @@ Anotacion para definir un campo de un objeto como email, nos permite realizar vi
     private String email;
  }
   ```
+    
+ @Min and @Max
+ valida que un campo posea un valor minimo y uno maximo
+ 
+ ```java 
+ Public Class Usuario() {
+    @Pattern(regexp = "[ 0-9 ]{2}[.][ 0-9 ]{3}[.][ 0-9 ]{3}[.][-][a-z A-Z]{1}")
+    private int rut;
+    private String name;
+    private String lastName;
+    @NotBlanke
+    @Size(min = 3, max = 8)
+    private int phone;
+    @Email(message = "formato incorrecto")
+    private String email;
+    @Min(5)
+    @Max(100000)
+    private int cuenta;
+ }
+  ```
+    
+  @DateTimeFormat
+  Se utiliza para definir el formato de los campos de fecha
+ 
+ ```java 
+ Public Class Usuario() {
+    @Pattern(regexp = "[ 0-9 ]{2}[.][ 0-9 ]{3}[.][ 0-9 ]{3}[.][-][a-z A-Z]{1}")
+    private int rut;
+    private String name;
+    private String lastName;
+    @NotBlanke
+    @Size(min = 3, max = 8)
+    private int phone;
+    @Email(message = "formato incorrecto")
+    private String email;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date register;
+ }
+  ```
+    
+   @Past
+  Se utiliza para definir que el ingreso de la fecha debe ser pasada a la actual
+ 
+ ```java 
+ Public Class Usuario() {
+    @Pattern(regexp = "[ 0-9 ]{2}[.][ 0-9 ]{3}[.][ 0-9 ]{3}[.][-][a-z A-Z]{1}")
+    private int rut;
+    private String name;
+    private String lastName;
+    @NotBlanke
+    @Size(min = 3, max = 8)
+    private int phone;
+    @Email(message = "formato incorrecto")
+    private String email;
+    @Past
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date register;
+ }
+  ```
+    
+   @Future
+  Se utiliza para definir que el ingreso de la fecha debe ser futura
+ 
+ ```java 
+ Public Class Usuario() {
+    @Pattern(regexp = "[ 0-9 ]{2}[.][ 0-9 ]{3}[.][ 0-9 ]{3}[.][-][a-z A-Z]{1}")
+    private int rut;
+    private String name;
+    private String lastName;
+    @NotBlanke
+    @Size(min = 3, max = 8)
+    private int phone;
+    @Email(message = "formato incorrecto")
+    private String email;
+    @Past
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date register;
+ }
+  ```
   
 ### CREACION DATABASE
 
